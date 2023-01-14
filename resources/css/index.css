@@ -17,13 +17,21 @@ p {
     max-width: 70ch;
     text-align: justify;
     color: #2b2b2b;
+    line-height: 1.5;
 }
 
 #introduction {
-    background-color: rgb(211, 255, 240);
+    /* background-color: rgb(211, 255, 240); */
     border-radius: 1rem;
     padding: 1rem;
-    border: .1rem solid rgb(250, 250, 250);
+    /* border: .1rem solid rgb(250, 250, 250); */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 12px 25px -7px;
+    transition: box-shadow 0.3s ease-in;
+}
+
+#introduction:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 25px 5px;
+    transition: box-shadow 0.3s ease-in;
 }
 
 #introduction img {
