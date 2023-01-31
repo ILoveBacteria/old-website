@@ -59,7 +59,7 @@ header {
 #card-body img {
     border-radius: 100%;
     max-width: 200px;
-    max-height: 200px;
+    height: auto;
     border: 3px solid white;
 }
 
@@ -70,10 +70,31 @@ header {
     color: rgba(255, 255, 255, 0.85);
 }
 
-#card-body p {
+#card-body span {
     color: rgba(255, 255, 255, 0.7);
 }
 
 .margin_bottom {
     margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 992px) {
+    #card-body {
+        justify-content: center;
+    }
+
+    #card-body div {
+        text-align: center;
+    }
+
+    #card-body img {
+        margin-bottom: 1rem;
+        max-width: 150px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #card-body {
+        padding: 1.5rem;
+    }
 }
