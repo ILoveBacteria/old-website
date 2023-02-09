@@ -82,6 +82,32 @@ header {
     margin-bottom: 2rem;
 }
 
+div#card-block {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    grid-auto-flow: row;
+    gap: 2rem;
+    justify-items: center;
+}
+
+div#card-block a {
+    text-decoration: none;
+}
+
+div.card {
+    width: 16rem;
+    user-select: none;
+    transition: background-color ease 0.1s, border ease 0.1s;
+    height: 100%;
+}
+
+div.card:hover {
+    border: 1px solid hsl(0, 0%, 70%);
+    background-color: hsl(0, 0%, 99%);
+    transition: background-color ease 0.1s, border ease 0.1s;
+    /*cursor: pointer;*/
+}
+
 @media only screen and (max-width: 992px) {
     #card-body {
         justify-content: center;
