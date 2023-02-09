@@ -90,17 +90,22 @@ div#card-block {
     justify-items: center;
 }
 
+div#card-block a {
+    text-decoration: none;
+}
+
 div.card {
     width: 16rem;
     user-select: none;
     transition: background-color ease 0.1s, border ease 0.1s;
+    height: 100%;
 }
 
 div.card:hover {
     border: 1px solid hsl(0, 0%, 70%);
     background-color: hsl(0, 0%, 99%);
     transition: background-color ease 0.1s, border ease 0.1s;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 @media only screen and (max-width: 992px) {
