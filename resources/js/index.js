@@ -54,7 +54,7 @@ class URL {
 
 async function getData(url) {
     url.queries.push(
-        new QueryParam('sort', 'updated'),
+        new QueryParam('sort', 'pushed'),
         new QueryParam('per_page', '4'),
     );
     const headers = {
@@ -112,7 +112,7 @@ async function updateGistCard() {
     const cardBlock = document.getElementById('gist');
     const repoRawData = await getGists();
     repoRawData
-        .map(x => new Card(null, x.name, x.description, x.html_url).toCardHTML())
+        .map(x => new Card(null, Object.keys(x.files)[0], x.description, x.html_url).toCardHTML())
         .forEach(x => cardBlock.appendChild(x));
 
 }
