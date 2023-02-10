@@ -1,4 +1,7 @@
-class Repository {
+const USERNAME = 'ILoveBacteria';
+
+
+class Card {
     constructor(image, name, description, html_url) {
         this.image = image;
         this.name = name;
@@ -9,8 +12,12 @@ class Repository {
     toCardHTML() {
         let card = document.createElement('a');
         card.setAttribute('href', this.html_url);
+        let imgTag = '';
+        if (this.image != null) {
+            imgTag = `<img src="${this.image}" class="card-img-top" alt="cover image">`;
+        }
         card.innerHTML =
-            `<div class="card"><img src="${this.image}" class="card-img-top" alt="repo cover image">
+            `<div class="card">${imgTag}
             <div class="card-body">
                 <h5 class="card-title">${this.name}</h5>
                 <p class="card-text">${this.description}</p>
@@ -45,9 +52,7 @@ class URL {
     }
 }
 
-async function getRepoData() {
-    const USERNAME = 'ILoveBacteria';
-    let url = new URL(`https://api.github.com/users/${USERNAME}/repos`);
+async function getData(url) {
     url.queries.push(
         new QueryParam('sort', 'updated'),
         new QueryParam('per_page', '4'),
@@ -88,21 +93,44 @@ async function getMetaImage(html_url) {
         return regex.exec(htmlText)[0].substring(29);
     } catch (e) {
         console.log(e);
-        return '';
+        return null;
     }
 }
 
 async function updateRepoCard() {
-    const cardBlock = document.getElementById('card-block');
-    const repoRawData = await getRepoData();
+    const cardBlock = document.getElementById('repository');
+    const repoRawData = await getRepositories();
     const metaImageList = await Promise.all(repoRawData.map(x => getMetaImage(x.html_url)));
     let i = 0;
     repoRawData
-        .map(x => new Repository(metaImageList[i++], x.name, x.description, x.html_url).toCardHTML())
+        .map(x => new Card(metaImageList[i++], x.name, x.description, x.html_url).toCardHTML())
         .forEach(x => cardBlock.appendChild(x));
 
 }
 
+async function updateGistCard() {
+    const cardBlock = document.getElementById('gist');
+    const repoRawData = await getGists();
+    repoRawData
+        .map(x => new Card(null, x.name, x.description, x.html_url).toCardHTML())
+        .forEach(x => cardBlock.appendChild(x));
+
+}
+
+function getRepositories() {
+    let url = new URL(`https://api.github.com/users/${USERNAME}/repos`);
+    return getData(url);
+}
+
+function getGists() {
+    let url = new URL(`https://api.github.com/users/${USERNAME}/gists`);
+    return getData(url);
+}
+
 updateRepoCard()
+    .then(resolved => console.log(resolved))
+    .catch(reject => console.log(reject));
+
+updateGistCard()
     .then(resolved => console.log(resolved))
     .catch(reject => console.log(reject));
