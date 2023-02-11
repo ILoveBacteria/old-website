@@ -94,6 +94,11 @@ div.card-block a {
     text-decoration: none;
 }
 
+div.card-footer {
+    font-size: 80%;
+    text-align: center;
+}
+
 div.card {
     width: 16rem;
     user-select: none;

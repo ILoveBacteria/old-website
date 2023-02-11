@@ -2,11 +2,30 @@ const USERNAME = 'ILoveBacteria';
 
 
 class Card {
-    constructor(image, name, description, html_url) {
+    constructor(image, name, description, html_url, lastUpdate) {
         this.image = image;
         this.name = name;
         this.description = description;
         this.html_url = html_url;
+        this.lastUpdate = lastUpdate;
+    }
+
+    elapsedTime() {
+        let now = new Date();
+        let lastUpdate = new Date(this.lastUpdate);
+        let diff = now.getTime() - lastUpdate.getTime();
+        diff /= (1000 * 60);
+        if (diff < 1) {
+            return 'just now';
+        }
+        if (diff < 60) {
+            return `${Math.ceil(diff)} minutes ago`;
+        }
+        diff /= 60;
+        if (diff < 24) {
+            return `${Math.ceil(diff)} hours ago`;
+        }
+        return `${Math.ceil(diff / 24)} days ago`;
     }
 
     toCardHTML() {
@@ -18,10 +37,12 @@ class Card {
         }
         card.innerHTML =
             `<div class="card">${imgTag}
-            <div class="card-body">
-                <h5 class="card-title">${this.name}</h5>
-                <p class="card-text">${this.description}</p>
-            </div></div>`
+                <div class="card-body">
+                    <h5 class="card-title">${this.name}</h5>
+                    <p class="card-text">${this.description}</p>
+                </div>
+                <div class="card-footer text-muted">Last update: ${this.elapsedTime()}</div>
+            </div>`
         return card;
     }
 }
@@ -103,7 +124,7 @@ async function updateRepoCard() {
     const metaImageList = await Promise.all(repoRawData.map(x => getMetaImage(x.html_url)));
     let i = 0;
     repoRawData
-        .map(x => new Card(metaImageList[i++], x.name, x.description, x.html_url).toCardHTML())
+        .map(x => new Card(metaImageList[i++], x.name, x.description, x.html_url, x.pushed_at).toCardHTML())
         .forEach(x => cardBlock.appendChild(x));
 
 }
@@ -112,7 +133,7 @@ async function updateGistCard() {
     const cardBlock = document.getElementById('gist');
     const repoRawData = await getGists();
     repoRawData
-        .map(x => new Card(null, Object.keys(x.files)[0], x.description, x.html_url).toCardHTML())
+        .map(x => new Card(null, Object.keys(x.files)[0], x.description, x.html_url, x.updated_at).toCardHTML())
         .forEach(x => cardBlock.appendChild(x));
 
 }
