@@ -113,18 +113,25 @@ div.card:hover {
 }
 
 footer {
-    background-color: hsla(0, 0%, 50%, 0.15);
-    padding: 1.5rem 0;
+    background-color: hsla(0, 0%, 50%, 0.1);
+    padding: 1rem 0;
 }
 
 footer div {
     display: flex;
     justify-content: space-between;
     align-content: center;
+    flex-wrap: wrap;
+}
+
+footer div span {
+    font-size: 0.8em;
+    display: block;
 }
 
 footer div span a {
     color: inherit;
+    font-size: inherit;
     text-decoration: none;
 }
 
