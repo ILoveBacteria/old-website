@@ -1,3 +1,15 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.05rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+p {
+    max-width: 70ch;
+    color: #2b2b2b;
+    line-height: 1.5;
+}
+
 h1 {
     font-size: 6rem !important;
 }
