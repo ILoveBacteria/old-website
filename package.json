@@ -7,16 +7,22 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-react-app": "^3.1.2",
     "babel-runtime": "^6.26.0",
+    "css-loader": "^6.8.1",
     "js-cookie": "^3.0.5",
+    "postcss": "^8.4.26",
+    "postcss-loader": "^7.3.3",
+    "postcss-preset-env": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "style-loader": "^3.3.3",
+    "tailwindcss": "^3.3.3",
     "webpack": "^5.76.1",
     "webpack-cli": "^5.0.1"
   },
   "main": "App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx babel drive/static/drive/javascript --out-dir drive/static/drive/compiled --presets react-app/prod && npx babel accounts/static/accounts/javascript --out-dir accounts/static/accounts/compiled --presets react-app/prod && npx webpack"
+    "build": "npx babel resources/javascript --out-dir resources/compiled --presets react-app/prod && npx webpack"
   },
   "repository": {
     "type": "git",
