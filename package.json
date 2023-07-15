@@ -1,0 +1,31 @@
+{
+  "name": "ilovebacteria.github.io",
+  "version": "0.0.0",
+  "description": "Moein Arabi's personal website",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-react-app": "^3.1.2",
+    "babel-runtime": "^6.26.0",
+    "js-cookie": "^3.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1"
+  },
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx babel drive/static/drive/javascript --out-dir drive/static/drive/compiled --presets react-app/prod && npx babel accounts/static/accounts/javascript --out-dir accounts/static/accounts/compiled --presets react-app/prod && npx webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ILoveBacteria/ILoveBacteria.github.io.git"
+  },
+  "author": "Moein Arabi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ILoveBacteria/ILoveBacteria.github.io/issues"
+  },
+  "homepage": "https://github.com/ILoveBacteria/ILoveBacteria.github.io#readme"
+}
