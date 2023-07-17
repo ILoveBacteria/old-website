@@ -1,11 +1,14 @@
 import React from "react";
+import '/resources/scss/styles.scss'
 
 
 export let Hero = () => {
     return (
-        <div>
-            <div>MohammadMoein Arabi</div>
-            <div>Computer Engineering student at Shahid Beheshti University</div>
+        <div className="vh-100 d-flex align-items-center" id="hero">
+            <div className="container">
+                <h1 className="fw-bold">MohammadMoein Arabi</h1>
+                <div className="text-muted">Computer Engineering student at Shahid Beheshti University</div>
+            </div>
         </div>
     );
 }

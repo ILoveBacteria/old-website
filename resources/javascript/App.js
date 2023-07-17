@@ -7,7 +7,7 @@ import * as bootstrap from 'bootstrap'
 
 let App = () => {
     return (
-        <div className="container">
+        <div>
             <Home/>
         </div>
     );
