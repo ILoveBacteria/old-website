@@ -7,6 +7,7 @@ import {Placeholder} from "./Placeholder";
 export let Info = () => {
     let style = {
         backgroundColor: '#2b3137',
+        width: '35%',
     }
 
     return (
