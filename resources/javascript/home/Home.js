@@ -1,7 +1,7 @@
 import React from "react";
 import {Hero} from "./Hero";
 import {Header} from "./Header";
-import {Github} from "./Github";
+import {Github} from "./github/Github";
 
 
 export let Home = () => {
