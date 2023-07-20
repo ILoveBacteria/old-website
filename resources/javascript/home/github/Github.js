@@ -1,5 +1,5 @@
 import React from "react";
-import {Card} from "./Card";
+import {Repository} from "./repository/Repository";
 import '/resources/scss/styles.scss'
 import {Info} from "./info/Info";
 
@@ -12,8 +12,15 @@ export let Github = () => {
     return (
         <section>
             <div style={style} className="d-flex justify-content-around px-4 pt-4">
-                <Info/>
-                <Card/>
+                <div>
+                    <Info/>
+                </div>
+                <div>
+                    <Repository/>
+                    <Repository/>
+                    <Repository/>
+                    <Repository/>
+                </div>
             </div>
         </section>
     );
