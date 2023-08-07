@@ -1,25 +1,28 @@
 import React from "react";
-import '/resources/scss/styles.scss'
+import {Tooltip} from "bootstrap";
+import {Icon} from "./Icon";
 
 
-export let Hero = () => {
-    return (
-        <div className="vh-100 d-flex align-items-center mb-5" id="hero">
-            <div className="container">
-                <h1 className="fw-bold">MohammadMoein Arabi</h1>
-                <div className="text-muted mb-4">Computer Engineering student at Shahid Beheshti University</div>
-                <span className="me-3" style={ICON_STYLE}>{githubIcon}</span>
-                <span className="me-3" style={ICON_STYLE}>{telegramIcon}</span>
-                <span className="me-3" style={ICON_STYLE}>{mailIcon}</span>
-                <span className="me-3" style={ICON_STYLE}>{linkedinIcon}</span>
+export class ContactIcon extends React.Component {
+    componentDidMount() {
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new Tooltip(tooltipTriggerEl))
+    }
+
+    render() {
+        return (
+            <div>
+                <Icon svg={githubIcon} title="GitHub"/>
+                <Icon svg={telegramIcon} title="Telegram"/>
+                <Icon svg={mailIcon} title="Mail"/>
+                <Icon svg={linkedinIcon} title="LinkedIn"/>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
-const SIZE = 26;
-const ICON_COLOR = "#393E46";
-const ICON_STYLE = {color: ICON_COLOR};
+
+const SIZE = 25;
 const githubIcon = (
     <svg xmlns="http://www.w3.org/2000/svg" width={SIZE} height={SIZE} fill="currentColor" className="bi bi-github"
          viewBox="0 0 16 16">
@@ -37,7 +40,8 @@ const telegramIcon = (
 );
 
 const mailIcon = (
-    <svg xmlns="http://www.w3.org/2000/svg" width={SIZE} height={SIZE} fill="currentColor" className="bi bi-envelope-fill"
+    <svg xmlns="http://www.w3.org/2000/svg" width={SIZE} height={SIZE} fill="currentColor"
+         className="bi bi-envelope-fill"
          viewBox="0 0 16 16">
         <path
             d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
