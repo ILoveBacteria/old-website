@@ -12,12 +12,12 @@ export let Github = () => {
     const githubStyle = {
         background: 'linear-gradient(to right, #6f86d6, #48c6ef)',
         fontSize: '4rem',
-        '-webkit-background-clip': 'text',
-        '-webkit-text-fill-color': 'transparent',
+        webkitBackgroundClip: 'text',
+        webkitTextFillColor: 'transparent',
     }
 
     return (
-        <section>
+        <section className="mb-5">
             <div style={style} className="d-flex justify-content-around align-items-center px-4 pt-4">
                 <div>
                     <h2 className="fw-bold" style={githubStyle}>GitHub</h2>

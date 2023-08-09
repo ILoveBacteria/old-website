@@ -4,6 +4,7 @@ import {Header} from "./Header";
 import {Github} from "./github/Github";
 import {Blog} from "./blog/Blog";
 import {AboutMe} from "./aboutme/AboutMe";
+import {Footer} from "./Footer";
 
 
 export let Home = () => {
@@ -14,6 +15,7 @@ export let Home = () => {
             <AboutMe/>
             <Blog/>
             <Github/>
+            <Footer/>
         </div>
     );
 }
