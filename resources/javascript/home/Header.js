@@ -10,16 +10,19 @@ export let Header = () => {
 
     return (
         <header>
-            <nav className="navbar navbar-expand fixed-top p-3" style={style}>
+            <nav id="navbar" className="navbar navbar-expand fixed-top p-3" style={style}>
                 <ul className="navbar-nav mx-auto">
                     <li className="nav-item">
-                        <a className="nav-link active" href="#about">About</a>
+                        <a className="nav-link" href="#hero">Contact-Info</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#github">Github</a>
+                        <a className="nav-link" href="#about">About</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#github">Github</a>
                     </li>
                 </ul>
             </nav>

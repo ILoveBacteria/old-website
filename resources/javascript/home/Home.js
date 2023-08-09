@@ -9,7 +9,7 @@ import {Footer} from "./Footer";
 
 export let Home = () => {
     return (
-        <div>
+        <div data-bs-spy="scroll" data-bs-target="#navbar">
             <Header/>
             <Hero/>
             <AboutMe/>

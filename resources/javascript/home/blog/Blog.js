@@ -5,7 +5,7 @@ import {LatestBlogs} from "./LatestBlogs";
 
 export let Blog = () => {
     return (
-        <section className="mb-5">
+        <section id="blog" className="mb-5">
             <div className="container">
                 <h2 className="fw-bold" style={{color: '#00ADB5'}}>Blog</h2>
                 <p style={{maxWidth: '70ch'}} className="mb-3">{description}</p>

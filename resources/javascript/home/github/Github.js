@@ -17,7 +17,7 @@ export let Github = () => {
     }
 
     return (
-        <section className="mb-5">
+        <section id="github" className="mb-5">
             <div style={style} className="d-flex justify-content-around align-items-center px-4 pt-4">
                 <div>
                     <h2 className="fw-bold" style={githubStyle}>GitHub</h2>
