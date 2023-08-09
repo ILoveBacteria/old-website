@@ -12,10 +12,10 @@ export class ContactIcon extends React.Component {
     render() {
         return (
             <div>
-                <Icon svg={githubIcon} title="GitHub"/>
-                <Icon svg={telegramIcon} title="Telegram"/>
-                <Icon svg={mailIcon} title="Mail"/>
-                <Icon svg={linkedinIcon} title="LinkedIn"/>
+                <a href="https://github.com/ILoveBacteria" target="_blank"><Icon svg={githubIcon} title="GitHub"/></a>
+                <a href="https://t.me/moein_arabi" target="_blank"><Icon svg={telegramIcon} title="Telegram"/></a>
+                <a href="mailto:moein.mo81@gmail.com" target="_blank"><Icon svg={mailIcon} title="Mail"/></a>
+                <a href="https://www.linkedin.com/in/moein-arabi/" target="_blank"><Icon svg={linkedinIcon} title="LinkedIn"/></a>
             </div>
         );
     }
