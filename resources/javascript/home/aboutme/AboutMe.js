@@ -17,9 +17,7 @@ export let AboutMe = () => {
             <H3>Experience</H3>
             <Experience/>
             <Experience/>
-            <Experience/>
             <H3>Education</H3>
-            <Education/>
             <Education/>
             <Education/>
             <H3>Licenses & certifications</H3>

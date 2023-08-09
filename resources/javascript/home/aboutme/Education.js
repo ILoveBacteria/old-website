@@ -1,13 +1,27 @@
 import React from "react";
+import {Date, Skills, Subtitle, Title} from "./Placeholder";
 
 
 export let Education = () => {
+    const height = '1.5rem';
     return (
         <div className="mb-3">
-            <div className="fw-semibold">Shahid Beheshti University</div>
-            <div>Bachelor's degree, Computer Engineering</div>
-            <div className="text-muted mb-2">Sep 2021 - Jun 2025</div>
-            <div>Skills: Git · C++ · Flutter · Java</div>
+            <div className="fw-semibold">
+                {/*Just remove this placeholder*/}
+                <Title/>
+            </div>
+            <div>
+                {/*Just remove this placeholder*/}
+                <Subtitle/>
+            </div>
+            <div className="text-muted mb-2">
+                {/*Just remove this placeholder*/}
+                <Date/>
+            </div>
+            <div>
+                {/*Just remove this placeholder*/}
+                <Skills/>
+            </div>
         </div>
     );
 }
