@@ -7,7 +7,7 @@ import {License} from "./License";
 
 export let AboutMe = () => {
     return (
-        <section className="mb-3 container">
+        <section className="mb-5 container">
             <H2>About Me</H2>
             <P>
                 I am a computer engineering student at Shahid Beheshti University. I am interested in
