@@ -12,4 +12,5 @@ let App = () => {
     );
 }
 
+export const ADDR = "SERVER ADDRESS";
 ReactDOM.render(<App/>, document.getElementById('app'));
