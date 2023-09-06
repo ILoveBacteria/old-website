@@ -17,8 +17,8 @@ export class AboutMe extends React.Component {
         if (!response.ok) {
             throw Error(`Status not OK for ${model}`);
         }
-        const data = await response.json();
-        this.setState({model: data});
+        this.state[model] = await response.json()
+        this.setState({});
     }
 
     componentDidMount() {
@@ -29,23 +29,23 @@ export class AboutMe extends React.Component {
 
     buildExperienceComponent() {
         if (this.state.experience == null) {
-            return [<Experience data={null}/>, <Experience data={null}/>];
+            return [<Experience key={1} data={null}/>, <Experience key={2} data={null}/>];
         }
-        return this.state.experience.map((x) => <Experience data={x}/>);
+        return this.state.experience.map((x) => <Experience key={x.id} data={x}/>);
     }
 
     buildEducationComponent() {
         if (this.state.education == null) {
-            return [<Education data={null}/>, <Education data={null}/>];
+            return [<Education key={1} data={null}/>, <Education key={2} data={null}/>];
         }
-        return this.state.education.map((x) => <Education data={x}/>);
+        return this.state.education.map((x) => <Education key={x.id} data={x}/>);
     }
 
     buildCertificateComponent() {
         if (this.state.certificate == null) {
-            return [<License data={null}/>, <License data={null}/>];
+            return [<License key={1} data={null}/>, <License key={2} data={null}/>];
         }
-        return this.state.certificate.map((x) => <License data={x}/>);
+        return this.state.certificate.map((x) => <License key={x.id} data={x}/>);
     }
 
     render() {
