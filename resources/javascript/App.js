@@ -12,5 +12,5 @@ let App = () => {
     );
 }
 
-export const ADDR = "SERVER ADDRESS";
+export const SERVER_ADDR = "https://server.moeinarabi.ir";
 ReactDOM.render(<App/>, document.getElementById('app'));

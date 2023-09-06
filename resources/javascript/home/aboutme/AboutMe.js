@@ -1,6 +1,6 @@
 import React from "react";
 import {H2, H3, P} from "../../utils/tags";
-import {ADDR} from "../../App";
+import {SERVER_ADDR} from "../../App";
 import {ResumeList} from "./ResumeList";
 
 
@@ -11,7 +11,7 @@ export class AboutMe extends React.Component {
     }
 
     async fetchData(model) {
-        const response = await fetch(`${ADDR}/website/api/${model}`);
+        const response = await fetch(`${SERVER_ADDR}/website/api/${model}`);
         if (!response.ok) {
             throw Error(`Status not OK for ${model}`);
         }
