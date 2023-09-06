@@ -12,8 +12,8 @@ export let Github = () => {
     const githubStyle = {
         background: 'linear-gradient(to right, #6f86d6, #48c6ef)',
         fontSize: '4rem',
-        webkitBackgroundClip: 'text',
-        webkitTextFillColor: 'transparent',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
     }
 
     return (
