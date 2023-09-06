@@ -2,8 +2,7 @@ import React from "react";
 import {Date, Skills, Subtitle, Title} from "./Placeholder";
 
 
-export let Education = (props) => {
-    const height = '1.5rem';
+export let Resume = (props) => {
     if (props.data == null) {
         return placeholder;
     }

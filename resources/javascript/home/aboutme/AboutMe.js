@@ -1,8 +1,5 @@
 import React from "react";
 import {H2, H3, P} from "../../utils/tags";
-import {Experience} from "./Experience";
-import {Education} from "./Education";
-import {License} from "./License";
 import {ADDR} from "../../App";
 import {ResumeList} from "./ResumeList";
 
@@ -38,11 +35,11 @@ export class AboutMe extends React.Component {
                     everything in computer and programming and learn new thing.
                 </P>
                 <H3>Experience</H3>
-                <ResumeList data={this.state.experience} component={Experience}/>
+                <ResumeList data={this.state.experience}/>
                 <H3>Education</H3>
-                <ResumeList data={this.state.education} component={Education}/>
+                <ResumeList data={this.state.education}/>
                 <H3>Licenses & certifications</H3>
-                <ResumeList data={this.state.certificate} component={License}/>
+                <ResumeList data={this.state.certificate}/>
             </section>
         );
     }

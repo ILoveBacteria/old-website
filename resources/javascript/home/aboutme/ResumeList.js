@@ -1,10 +1,10 @@
 import React from "react";
+import {Resume} from "./Resume";
 
 
 export let ResumeList = (props) => {
-    const Component = props.component;
     if (props.data == null) {
-            return [<Component key={1} data={null}/>, <Component key={2} data={null}/>];
+            return [<Resume key={1} data={null}/>, <Resume key={2} data={null}/>];
         }
-        return props.data.map((x) => <Component key={x.id} data={x}/>);
+        return props.data.map((x) => <Resume key={x.id} data={x}/>);
 }
