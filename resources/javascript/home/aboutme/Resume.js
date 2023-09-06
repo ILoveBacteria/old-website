@@ -8,9 +8,9 @@ export let Resume = (props) => {
     }
     return (
         <div className="mb-3">
-            <div className="fw-semibold">{props.data.title}</div>
+            <div className="fw-semibold mb-1">{props.data.title}</div>
             <div>{props.data.subtitle}</div>
-            <div className="text-muted mb-2">{props.data.date}</div>
+            <div className="text-muted mb-2" style={{fontSize: '0.9rem'}}>{props.data.date}</div>
             <div>{props.data.skills}</div>
         </div>
     );
