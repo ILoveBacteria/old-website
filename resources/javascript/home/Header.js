@@ -6,6 +6,7 @@ export let Header = () => {
     let style = {
         backgroundColor: "rgba(255,255,255,0.1)",
         backdropFilter: "blur(10px)",
+        "-webkit-backdrop-filter": "blur(10px)",
     }
 
     return (
