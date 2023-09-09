@@ -1,4 +1,5 @@
 import React from "react";
+import BackgroundImage from "../../images/Artboard.png";
 
 
 export let Footer = () => {
@@ -7,8 +8,14 @@ export let Footer = () => {
         backgroundColor: 'rgba(117,183,152,0.2)'
     }
 
+    const backgroundFooter = {
+        backgroundImage: `url(${BackgroundImage})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+    }
+
     return (
-        <footer className="text-center p-4">
+        <footer style={backgroundFooter} className="text-center p-4">
             <p>Designed by myself!</p>
             <div>
                 <span className="me-2">{githubIcon}</span>

@@ -51,9 +51,3 @@
 * {
     font-family: 'Sahel', serif;
 }
-
-#hero, footer {
-    background-image: url("../images/Artboard.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}

@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import {Home} from "./home/Home";
-import '../scss/styles.scss'
+import "../scss/styles.scss";
+import "../css/app.css"
 
 
 let App = () => {
