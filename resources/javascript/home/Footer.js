@@ -13,7 +13,7 @@ export let Footer = () => {
             <div>
                 <span className="me-2">{githubIcon}</span>
                 <span className="me-2">GutHub Pages</span>
-                <span className="badge rounded-pill font-monospace" style={badgeStyle}>v0.2.0</span>
+                <span className="badge rounded-pill font-monospace" style={badgeStyle}>v0.2.1</span>
             </div>
         </footer>
     );
