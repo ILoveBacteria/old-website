@@ -1,7 +1,7 @@
 const autoprefixer = require("autoprefixer");
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './resources/compiled/App.js',
     output: {
         filename: 'app.js',

@@ -35,9 +35,9 @@ export class AboutMe extends React.Component {
                     </span>
                 </div>
                 <P>
-                    I am a computer engineering student at Shahid Beheshti University. I am interested in
-                    Back-end and Front-end development. currently improving myself in programming. I like to experience
-                    everything in computer and programming and learn new thing.
+                    I am a student of computer engineering at Shahid Beheshti University. My current focus is on
+                    enhancing my programming skills. My interest lies in exploring various aspects of computers and
+                    programming while learning new things.
                 </P>
                 <H3>Experience</H3>
                 <ResumeList data={this.state.experience}/>
