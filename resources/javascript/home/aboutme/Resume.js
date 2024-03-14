@@ -15,6 +15,7 @@ export let Resume = (props) => {
                 <div>{props.data.subtitle}</div>
                 <div className="text-muted mb-2" style={{fontSize: '0.9rem'}}>{props.data.date}</div>
                 <div>{props.data.skills}</div>
+                {props.data.link != null && <link href={props.data.link} target="_blank" />}
             </div>
         </div>
     );
